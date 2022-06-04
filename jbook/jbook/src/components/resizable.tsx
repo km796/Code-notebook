@@ -4,12 +4,12 @@ import { ResizableBox } from "react-resizable";
 
 interface ResizableProps {
   direction: "horizontal" | "vertical";
-  children: any;
+  children: React.ReactNode;
 }
 
 const Resizable: React.FC<ResizableProps> = ({ direction, children }) => {
   return (
-    <ResizableBox height={300} width={300} resizeHandles={["s"]}>
+    <ResizableBox height={300} width={Infinity} resizeHandles={["s"]}>
       {children}
     </ResizableBox>
   );
