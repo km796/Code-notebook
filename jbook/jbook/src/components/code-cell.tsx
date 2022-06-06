@@ -11,10 +11,21 @@ const CodeCell = () => {
   const [code, setCode] = useState("");
   const [input, setInput] = useState("");
 
-  const onClick = async () => {
-    const output = await bundle(input);
-    setCode(output);
-  };
+  useEffect(() => {
+    const timer = setTimeout(async () => {
+      const output = await bundle(input);
+      setCode(output);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [input]);
+
+  // const onClick = async () => {
+  //   const output = await bundle(input);
+  //   setCode(output);
+  // };
 
   return (
     <Resizable direction="vertical">
