@@ -32,6 +32,10 @@
   border-top: 1px solid #dee5ed;
 }
 
+.text-editor .wmde-markdown {
+  background-color: transparent;
+}
+
 .text-editor .wmde-markdown ol {
   list-style: decimal;
 }

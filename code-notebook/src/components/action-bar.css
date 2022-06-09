@@ -3,3 +3,7 @@
   top: 0;
   right: 0;
 }
+
+.button.is-small.noradius {
+  border-radius: 0px;
+}
