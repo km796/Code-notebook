@@ -8,11 +8,13 @@ import { store } from "./state";
 import CodeCell from "./components/code-cell";
 import TextEditor from "./components/text-editor";
 import CellList from "./components/cell-list";
+import TopNav from "./components/top-nav";
 
 const App = () => {
   return (
     <Provider store={store}>
       <div>
+        <TopNav />
         <CellList />
       </div>
     </Provider>
