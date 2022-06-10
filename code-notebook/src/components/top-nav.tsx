@@ -3,9 +3,8 @@ import "./top-nav.css";
 const TopNav = () => {
   return (
     <div className="top-nav">
-      <div className="logo">
-        <img src="logo.png"></img>
-      </div>
+      <img className="logo" src="logo.png"></img>
+      <img className="logo-text" src="logo-text.png"></img>
     </div>
   );
 };
